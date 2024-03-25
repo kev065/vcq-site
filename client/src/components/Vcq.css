@@ -1,0 +1,79 @@
+.vcq {
+  background-color: #0e1a35;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a,
+.link-button {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link-button { 
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.sign-in {
+  background-color: #00c48c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 10px;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+}
+
+.login,
+.open-account {
+  background-color: #00c48c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
