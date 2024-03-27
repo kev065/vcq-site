@@ -15,7 +15,7 @@ const Vcq = () => {
           <li><button className="link-button">About</button></li>
           </ul>
         </nav>
-        <button className="sign-in">SIGN IN</button>
+        <button className="sign-in">Sign In</button>
       </div>
 
       <div className="hero">
