@@ -91,6 +91,11 @@ nav a,
   margin-bottom: 10px;
 }
 
+.hero-paragraph {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .cta-buttons {
   margin-top: 30px;
 }
