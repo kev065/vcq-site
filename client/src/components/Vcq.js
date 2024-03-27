@@ -6,7 +6,9 @@ const Vcq = () => {
     <div className="vcq">
       <div className="header">
         <div className="logo">
-          <img src={require('./icon10.png')} alt="Valcheq Logo" />
+          <a href="https://valcheq.com">
+            <img src={require('./icon10.png')} alt="Valcheq Logo" />
+          </a>
         </div>
         <nav>
           <ul>
