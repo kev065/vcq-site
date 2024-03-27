@@ -104,3 +104,19 @@ nav a,
   cursor: pointer;
   margin-right: 10px;
 }
+
+.contact-us {
+  display:inline-block;
+  background-color: #13211d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-us:hover {
+  background-color: #e51818;
+}

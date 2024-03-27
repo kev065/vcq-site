@@ -15,7 +15,7 @@ const Vcq = () => {
           <li><button className="link-button">About</button></li>
           </ul>
         </nav>
-        <button className="sign-in">Sign In</button>
+        {/*<button className="sign-in">Sign In</button>*/}
       </div>
 
       <div className="hero">
@@ -27,7 +27,10 @@ const Vcq = () => {
         <p>All-in-one Interface: No more switching tabs! Execute trades directly on your chosen exchange through our secure and integrated platform.</p>
         <p>Exchange Choice: We connect to a wide range of top crypto exchanges, giving you the freedom to choose the one that best suits your needs.</p>
         <div className="cta-buttons">
-          <button className="open-account">Open Account</button>
+
+          {/*<button className="open-account">Open Account</button>*/}
+
+          <a href="mailto:kelvin@valcheq.com" className="contact-us">Contact Us</a>
         </div>
       </div>
     </div>
