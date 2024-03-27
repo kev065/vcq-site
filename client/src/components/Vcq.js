@@ -10,22 +10,23 @@ const Vcq = () => {
         </div>
         <nav>
           <ul>
-          <li><button className="link-button">Exchange</button></li>
+          <li><button className="link-button">Exchanges</button></li>
           <li><button className="link-button">Products</button></li>
           <li><button className="link-button">About</button></li>
-          <li><button className="link-button">Insights</button></li>
           </ul>
         </nav>
         <button className="sign-in">SIGN IN</button>
       </div>
 
       <div className="hero">
-        <h1>Valcheq – For All Your Trades</h1>
-        <p>A Multi-Exchange Crypto Trading Platform to trade on all major crypto exchanges within a single interface.</p>
-        <p>Smart trading tools and social signals for crypto traders to maximize profits across multiple exchanges</p>
-        <p>20+ Connected Exchangs and more than 5000 Total Trading Pairs</p>
+        <h1>Valcheq – Your News-Powered Trading Edge</h1>
+        <p>In today's fast-paced crypto market, staying ahead of the curve is crucial. Our innovative trading terminal puts the power of real-time news and 
+	seamless execution at your fingertips. </p>
+        <p>Here's what sets us apart:</p>
+        <p>Actionable News Feed: Our curated news feed filters out the noise, highlighting actionable insights that can inform your trading decisions.</p>
+        <p>All-in-one Interface: No more switching tabs! Execute trades directly on your chosen exchange through our secure and integrated platform.</p>
+        <p>Exchange Choice: We connect to a wide range of top crypto exchanges, giving you the freedom to choose the one that best suits your needs.</p>
         <div className="cta-buttons">
-          <button className="login">Login to Valcheq</button>
           <button className="open-account">Open Account</button>
         </div>
       </div>
