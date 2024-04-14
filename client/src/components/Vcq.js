@@ -21,7 +21,7 @@ const Vcq = () => {
       </div>
 
       <div className="hero">
-        <h1>Valcheq – Your News-Powered Trading Edge</h1>
+        <h1>Valcheq – Your News-Powered Trading Terminal</h1>
         <p className="hero-paragraph">In today's fast-paced crypto market, staying ahead of the curve is crucial. Our innovative trading terminal 
           puts the power of real-time news and 
           seamless execution at your fingertips. </p>
