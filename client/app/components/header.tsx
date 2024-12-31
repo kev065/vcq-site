@@ -1,24 +1,19 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function Header() {
   return (
     <header className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center space-x-2">
-          <svg
-            className="h-8 w-8 text-blue-600"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 10V3L4 14h7v7l9-11h-7z"
-            />
-          </svg>
+        <Link href="/" className="flex items-center space-x-3">
+          <Image
+            src="/images/valcheq_logo.png"
+            alt="Valcheq Technologies Logo"
+            width={32}
+            height={32}
+            className="h-8 w-auto"
+          />
           <span className="text-xl font-bold text-gray-800">Valcheq Technologies</span>
         </Link>
         <nav>
