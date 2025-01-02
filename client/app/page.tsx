@@ -2,6 +2,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Code, BarChart, Brain } from 'lucide-react'
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function Home() {
   return (
@@ -32,7 +34,7 @@ export default function Home() {
                 <ul className="space-y-2">
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Custom Website Development</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Web Application Development</li>
-                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Personal & Portfolio Websites</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Personal & Portfolio Sites</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Payment Integration</li>
                 </ul>
               </CardContent>
@@ -85,23 +87,25 @@ export default function Home() {
       <section id="contact" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">Get In Touch</h2>
-          <div className="max-w-md mx-auto">
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block mb-2 text-blue-800">Name</label>
-                <input type="text" id="name" name="name" className="w-full p-2 border border-blue-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
-              </div>
-              <div>
-                <label htmlFor="email" className="block mb-2 text-blue-800">Email</label>
-                <input type="email" id="email" name="email" className="w-full p-2 border border-blue-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
-              </div>
-              <div>
-                <label htmlFor="message" className="block mb-2 text-blue-800">Message</label>
-                <textarea id="message" name="message" rows={4} className="w-full p-2 border border-blue-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent" required></textarea>
-              </div>
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">Send Message</Button>
-            </form>
-          </div>
+          <Card className="max-w-md mx-auto">
+            <CardContent>
+              <form className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-700">Name</label>
+                  <Input type="text" id="name" name="name" required className="w-full" />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700">Email</label>
+                  <Input type="email" id="email" name="email" required className="w-full" />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-700">Message</label>
+                  <Textarea id="message" name="message" rows={4} required className="w-full" />
+                </div>
+                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">Send Message</Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </div>
