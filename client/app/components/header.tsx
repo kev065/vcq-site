@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function Header() {
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-3">
           <Image
@@ -16,13 +16,13 @@ export default function Header() {
           />
         </Link>
         <nav>
-          <ul className="flex space-x-4">
-            <li><Link href="/#services" className="text-gray-600 hover:text-blue-600">Services</Link></li>
-            <li><Link href="/#about" className="text-gray-600 hover:text-blue-600">About</Link></li>
-            <li><Link href="/#contact" className="text-gray-600 hover:text-blue-600">Contact</Link></li>
+          <ul className="flex space-x-6">
+            <li><Link href="/#services" className="hover:text-blue-200 transition-colors">Services</Link></li>
+            <li><Link href="/#about" className="hover:text-blue-200 transition-colors">About</Link></li>
+            <li><Link href="/#contact" className="hover:text-blue-200 transition-colors">Contact</Link></li>
           </ul>
         </nav>
-        <Button asChild>
+        <Button asChild variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50">
           <Link href="/#contact">Get Started</Link>
         </Button>
       </div>
