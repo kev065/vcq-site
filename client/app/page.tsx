@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Code, BarChart, Brain } from 'lucide-react'
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">About Valcheq Technologies</h2>
           <p className="text-lg text-center max-w-3xl mx-auto text-blue-900">
-            At Valcheq Technologies, we're passionate about leveraging cutting-edge technology to solve complex business challenges. Our team of experts specializes in web development, data analytics, and AI solutions, providing tailored services to help businesses thrive in the digital age.
+            At Valcheq Technologies, we&apos;re passionate about leveraging cutting-edge technology to solve complex business challenges. Our team of experts specializes in web development, data analytics, and AI solutions, providing tailored services to help businesses thrive in the digital age.
           </p>
         </div>
       </section>
