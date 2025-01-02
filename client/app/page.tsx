@@ -89,25 +89,81 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">Get In Touch</h2>
           <Card className="max-w-md mx-auto">
             <CardContent>
-              <form className="space-y-4">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                className="space-y-4"
+              >
+                {/* Web3 Forms Access Key */}
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="43c9e142-62d3-4ed8-85ca-e5bf52a7399f"
+                />
+
                 <div>
-                  <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-700">Name</label>
-                  <Input type="text" id="name" name="name" required className="w-full" />
+                  <label
+                    htmlFor="name"
+                    className="block mb-2 text-sm font-medium text-gray-700"
+                  >
+                    Name
+                  </label>
+                  <Input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                    className="w-full"
+                  />
                 </div>
+
                 <div>
-                  <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700">Email</label>
-                  <Input type="email" id="email" name="email" required className="w-full" />
+                  <label
+                    htmlFor="email"
+                    className="block mb-2 text-sm font-medium text-gray-700"
+                  >
+                    Email
+                  </label>
+                  <Input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                    className="w-full"
+                  />
                 </div>
+
                 <div>
-                  <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-700">Message</label>
-                  <Textarea id="message" name="message" rows={4} required className="w-full" />
+                  <label
+                    htmlFor="message"
+                    className="block mb-2 text-sm font-medium text-gray-700"
+                  >
+                    Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="Your Message"
+                    rows={4}
+                    required
+                    className="w-full"
+                  />
                 </div>
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">Send Message</Button>
+
+                <Button
+                  type="submit"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                >
+                  Send Message
+                </Button>
               </form>
             </CardContent>
           </Card>
         </div>
       </section>
+
     </div>
   )
 }
