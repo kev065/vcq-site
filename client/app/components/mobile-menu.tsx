@@ -4,15 +4,24 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/s
 import { Button } from "@/components/ui/button"
 import { Menu } from 'lucide-react'
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import { VisuallyHidden } from "@/components/ui/visually-hidden"
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false)
 
-  const handleLinkClick = () => {
-    setOpen(false)
-  }
+  const handleLinkClick = useCallback((event: React.MouseEvent) => {
+    event.preventDefault();
+    const href = (event.currentTarget as HTMLAnchorElement | HTMLButtonElement).getAttribute('href');
+    setOpen(false);
+  
+    setTimeout(() => {
+      const element = document.querySelector(href as string);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  }, []);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
