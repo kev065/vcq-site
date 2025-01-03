@@ -18,14 +18,14 @@ export default function Header() {
         </Link>
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
-            <li><Link href="/#services" className="hover:text-blue-200 transition-colors">Services</Link></li>
-            <li><Link href="/#about" className="hover:text-blue-200 transition-colors">About</Link></li>
-            <li><Link href="/#contact" className="hover:text-blue-200 transition-colors">Contact</Link></li>
+            <li><Link href="#services" className="hover:text-blue-200 transition-colors">Services</Link></li>
+            <li><Link href="#about" className="hover:text-blue-200 transition-colors">About</Link></li>
+            <li><Link href="#contact" className="hover:text-blue-200 transition-colors">Contact</Link></li>
           </ul>
         </nav>
         <div className="hidden md:block">
           <Button asChild variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50">
-            <Link href="/#contact">Get Started</Link>
+            <Link href="#contact">Get Started</Link>
           </Button>
         </div>
         <div className="md:hidden">
