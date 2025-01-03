@@ -1,4 +1,6 @@
 import Link from "next/link"
+import { FaLinkedin } from "react-icons/fa";
+import { Button } from "@/components/ui/button"
 
 export default function Footer() {
   return (
@@ -21,6 +23,14 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <p className="text-blue-200">Email: kelvinkayoi@gmail.com</p>
             <p className="text-blue-200">Phone: +254 703 649833</p>
+            <div className="mt-4">
+            <Button asChild variant="outline" size="sm" className="bg-transparent border-blue-200 text-blue-200 hover:bg-blue-800">
+              <Link href="https://www.linkedin.com/company/valcheq" target="_blank" rel="noopener" className="inline-flex items-center">
+                <FaLinkedin className="mr-2 h-4 w-4" />
+                Follow us on LinkedIn
+              </Link>
+            </Button>
+            </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-blue-800 text-center">
