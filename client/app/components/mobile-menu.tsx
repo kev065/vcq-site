@@ -28,23 +28,23 @@ export default function MobileMenu() {
         </VisuallyHidden>
         <nav className="flex flex-col gap-4">
           <SheetClose asChild>
-            <Link href="/#services" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
+            <Link href="#services" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
               Services
             </Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/#about" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
+            <Link href="#about" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
               About
             </Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/#contact" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
+            <Link href="#contact" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
               Contact
             </Link>
           </SheetClose>
           <SheetClose asChild>
             <Button asChild className="mt-4" onClick={handleLinkClick}>
-              <Link href="/#contact">Get Started</Link>
+              <Link href="#contact">Get Started</Link>
             </Button>
           </SheetClose>
         </nav>
