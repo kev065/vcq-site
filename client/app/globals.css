@@ -77,5 +77,18 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px; /* header height */
+  }
 }
 

@@ -4,24 +4,47 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/s
 import { Button } from "@/components/ui/button"
 import { Menu } from 'lucide-react'
 import Link from "next/link"
-import { useState, useCallback } from "react"
+import { useState, useCallback, useEffect } from "react"
 import { VisuallyHidden } from "@/components/ui/visually-hidden"
 
 export default function MobileMenu() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   const handleLinkClick = useCallback((event: React.MouseEvent) => {
-    event.preventDefault();
-    const href = (event.currentTarget as HTMLAnchorElement | HTMLButtonElement).getAttribute('href');
-    setOpen(false);
+    const href = (event.currentTarget as HTMLAnchorElement).getAttribute('href');
+    if (href) {
+      event.preventDefault();
+      setOpen(false);
   
-    setTimeout(() => {
-      const element = document.querySelector(href as string);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          const headerOffset = 80; // header height
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 300); // 300ms delay to allow the sheet to close
+    }
   }, []);
+
+  // Prevent body scroll when sheet is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [open]);
+  
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
