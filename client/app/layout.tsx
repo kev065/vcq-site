@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Valcheq Technologies",
-  description: "Web Development, Data Analytics, and AI Solutions",
+  description: "Empowering businesses with cutting-edge web development, data analytics, and AI solutions. Valcheq Technologies offers custom website and app development, data analysis services, chatbots and AI-powered applications.",
 }
 
 export default function RootLayout({
