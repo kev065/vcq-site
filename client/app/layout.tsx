@@ -12,7 +12,10 @@ import Script from 'next/script';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Valcheq Technologies",
+  title: {
+    default: "Valcheq Technologies",
+    template: "%s | Valcheq Technologies",
+  },
   description:
     "Empowering businesses with cutting-edge web development, data analytics, and AI solutions. Valcheq Technologies offers custom website and app development, data analysis services, chatbots and AI-powered applications.",
 };
