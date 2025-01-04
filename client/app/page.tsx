@@ -65,7 +65,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Predictive Modeling</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Predictive Analytics/Modeling</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> AI-Powered Applications</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Business Chatbots</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Machine Learning Pipelines</li>
