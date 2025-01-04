@@ -32,9 +32,11 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Custom Website Development</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Web Application Development</li>
-                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Personal & Portfolio Sites</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Cross-Platform App Development</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> E-commerce Solutions</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Content Management System (CMS)</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Personal & Portfolio Websites</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Payment Integration</li>
                 </ul>
               </CardContent>
@@ -42,22 +44,23 @@ export default function Home() {
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center text-blue-600">
-                  <BarChart className="mr-2" /> Data Analytics
+                  <BarChart className="mr-2" /> Data Analytics & Business Intelligence
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Exploratory Data Analysis (EDA)</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Data Strategy Consulting</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Dashboard Creation</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Business Reporting</li>
-                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Data Strategy Consulting</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Customer Behaviour Analysis</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Real-Time Analytics</li>
                 </ul>
               </CardContent>
             </Card>
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center text-blue-600">
-                  <Brain className="mr-2" /> AI & Data Science
+                  <Brain className="mr-2" /> AI & Machine Learning Solutions
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -65,7 +68,9 @@ export default function Home() {
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Predictive Modeling</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> AI-Powered Applications</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Business Chatbots</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Machine Learning Pipelines</li>
                   <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> NLP & Sentiment Analysis</li>
+                  <li className="flex items-center"><CheckCircle className="mr-2 h-4 w-4 text-green-500" /> Recommendation Systems</li>
                 </ul>
               </CardContent>
             </Card>
