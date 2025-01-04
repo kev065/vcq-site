@@ -17,17 +17,28 @@ export default function MobileMenu() {
       setOpen(false);
   
       setTimeout(() => {
-        const element = document.querySelector(href);
-        if (element) {
-          const headerOffset = 80; // header height
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        // Extract the hash part of the URL (e.g., `#contact`)
+        const hash = new URL(href, window.location.origin).hash;
   
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
+        // Navigate to the root path with the hash
+        window.location.href = `/${hash}`;
+  
+        // Wait for the page to load, then scroll to the target element
+        setTimeout(() => {
+          if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+              const headerOffset = 80; // header height
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        }, 100); // Small delay to ensure the page has navigated
       }, 300); // 300ms delay to allow the sheet to close
     }
   }, []);
@@ -60,23 +71,23 @@ export default function MobileMenu() {
         </VisuallyHidden>
         <nav className="flex flex-col gap-4">
           <SheetClose asChild>
-            <Link href="#services" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
+            <Link href="/#services" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
               Services
             </Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="#about" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
+            <Link href="/#about" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
               About
             </Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="#contact" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
+            <Link href="/#contact" className="text-lg font-semibold hover:text-blue-600 transition-colors" onClick={handleLinkClick}>
               Contact
             </Link>
           </SheetClose>
           <SheetClose asChild>
             <Button asChild className="mt-4" onClick={handleLinkClick}>
-              <Link href="#contact">Get Started</Link>
+              <Link href="/#contact">Get Started</Link>
             </Button>
           </SheetClose>
         </nav>
