@@ -17,6 +17,7 @@ export default function Footer() {
               <li><Link href="/#services" className="text-blue-200 hover:text-white transition-colors">Services</Link></li>
               <li><Link href="/#about" className="text-blue-200 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/#contact" className="text-blue-200 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/privacy-policy" className="text-blue-200 hover:text-white transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
           <div>
@@ -34,7 +35,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-blue-800 text-center">
-          <p className="text-blue-300">&copy; 2024 Valcheq Technologies. All rights reserved.</p>
+          <p className="text-blue-300">&copy; 2025 Valcheq Technologies. All rights reserved.</p>
         </div>
       </div>
     </footer>
