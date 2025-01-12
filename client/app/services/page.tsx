@@ -144,7 +144,7 @@ export default function ServicesPage() {
       <section className="bg-blue-50 py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6 text-center text-blue-800">Ready to Transform Your Business?</h2>
-          <p className="text-center mb-8 text-gray-600">Let's discuss how our services can help you achieve your goals.</p>
+          <p className="text-center mb-8 text-gray-600">Let&apos;s discuss how our services can help you achieve your goals.</p>
           <div className="text-center">
             <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">
               Contact Us Today
