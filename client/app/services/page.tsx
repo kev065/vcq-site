@@ -1,9 +1,27 @@
 import type { Metadata } from "next";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Our Services | Valcheq Technologies",
+  description: "Explore Valcheq Technologies' comprehensive range of services including Web Development, Data Analytics, and AI & Machine Learning Solutions.",
+  openGraph: {
+    title: "Our Services | Valcheq Technologies",
+    description: "Discover our expert services in Web Development, Data Analytics, and AI & Machine Learning Solutions.",
+    url: "https://www.valcheq.com/services",
+    siteName: "Valcheq Technologies",
+    images: [
+      {
+        url: "https://www.valcheq.com/images/services-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Valcheq Technologies Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 const services = [
@@ -94,31 +112,58 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-12 text-center text-blue-800">Our Services</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold text-blue-600">{service.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-4">
-                {service.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold text-gray-800">{item.name}</h3>
-                      <p className="text-sm text-gray-600">{item.description}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </div>
+    <>
+      <main className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8 text-center text-blue-800">Our Services</h1>
+        <p className="text-xl text-center mb-12 text-gray-600">Empowering businesses with cutting-edge technology solutions</p>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <section key={index} className="mb-8">
+              <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow h-full">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-blue-600">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4">
+                    {service.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" aria-hidden="true" />
+                        <div>
+                          <h3 className="font-semibold text-gray-800">{item.name}</h3>
+                          <p className="text-sm text-gray-600">{item.description}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </section>
+          ))}
+        </div>
+      </main>
+      <section className="bg-blue-50 py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center text-blue-800">Ready to Transform Your Business?</h2>
+          <p className="text-center mb-8 text-gray-600">Let's discuss how our services can help you achieve your goals.</p>
+          <div className="text-center">
+            <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">
+              Contact Us Today
+            </Link>
+          </div>
+        </div>
+      </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": services.map((service, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": service.title,
+          "description": `${service.title} services offered by Valcheq Technologies`,
+          "url": `https://www.valcheq.com/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`
+        }))
+      })}} />
+    </>
   );
 }
 
