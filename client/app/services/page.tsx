@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -104,9 +105,12 @@ export default function ServicesPage() {
             <CardContent>
               <ul className="space-y-4">
                 {service.items.map((item, itemIndex) => (
-                  <li key={itemIndex}>
-                    <h3 className="font-semibold text-gray-800">{item.name}</h3>
-                    <p className="text-sm text-gray-600">{item.description}</p>
+                  <li key={itemIndex} className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-gray-800">{item.name}</h3>
+                      <p className="text-sm text-gray-600">{item.description}</p>
+                    </div>
                   </li>
                 ))}
               </ul>
