@@ -4,16 +4,16 @@ import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Our Services | Valcheq Technologies",
+  title: "Our Services",
   description: "Explore Valcheq Technologies' comprehensive range of services including Web Development, Data Analytics, and AI & Machine Learning Solutions.",
   openGraph: {
     title: "Our Services | Valcheq Technologies",
     description: "Discover our expert services in Web Development, Data Analytics, and AI & Machine Learning Solutions.",
-    url: "https://www.valcheq.com/services",
+    url: "https://valcheq.com/services",
     siteName: "Valcheq Technologies",
     images: [
       {
-        url: "https://www.valcheq.com/images/services-og.jpg",
+        url: "https://valcheq.com/images/services-og.jpg",
         width: 1200,
         height: 630,
         alt: "Valcheq Technologies Services",
