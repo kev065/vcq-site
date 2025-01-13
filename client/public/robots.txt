@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /features
+Disallow: /help
+Disallow: /admin/login
+Disallow: /login-form
+Disallow: /admin/login-form
+Disallow: /password/reset
+Disallow: /register
+Disallow: /admin
+Disallow: /location
+Disallow: /blogsearch
+Disallow: /login
