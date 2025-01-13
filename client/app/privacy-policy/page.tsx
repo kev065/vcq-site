@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     siteName: "Valcheq Technologies",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://valcheq.com/images/privacy-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Valcheq Technologies Privacy Policy",
+      },
+    ],
   },
 };
 
