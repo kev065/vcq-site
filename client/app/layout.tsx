@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Valcheq Technologies",
   },
   description:
-    "Empowering businesses with cutting-edge web development, data analytics, and AI solutions. Valcheq Technologies offers custom website and app development, data analysis services, chatbots and AI-powered applications.",
+    "Empowering businesses with cutting-edge Web Development, Data Analytics, and AI Solutions. Valcheq Technologies offers custom Website and App Development, Data Analysis services, Chatbots and AI-powered applications.",
 };
 
 export default function RootLayout({
