@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -5,9 +6,42 @@ import { CheckCircle, Code, BarChart, Brain } from 'lucide-react'
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
+export const metadata: Metadata = {
+  title: 'Valcheq Technologies | Web Development, Data Analytics, and AI Solutions',
+  description: 'Empowering businesses with cutting-edge Web Development, Data Analytics, and AI solutions. Valcheq Technologies offers tailored services to help your business thrive in the digital age.',
+  openGraph: {
+    title: 'Valcheq Technologies - Empowering Your Digital Journey',
+    description: 'Cutting-edge Web Development, Data Analytics, and AI Solutions for businesses.',
+    url: 'https://valcheq.com',
+    siteName: 'Valcheq Technologies',
+    images: [
+      {
+        url: 'https://valcheq.com/images/homepage-og.jpg',
+        width: 1767,
+        height: 1317,
+        alt: 'Valcheq Technologies - Web Development, Data Analytics, and AI Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
+
 export default function Home() {
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white">
+    <>
+    <main className="bg-gradient-to-b from-blue-50 to-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -83,7 +117,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">About Valcheq Technologies</h2>
           <p className="text-lg text-center max-w-3xl mx-auto text-blue-900">
-            At Valcheq Technologies, we&apos;re passionate about leveraging cutting-edge technology to solve complex business challenges. Our team of experts specializes in web development, data analytics, and AI solutions, providing tailored services to help businesses thrive in the digital age.
+            At Valcheq Technologies, we&apos;re passionate about leveraging cutting-edge technology to solve complex business challenges. Our team of experts specializes in Web Development, Data Analytics, and AI solutions, providing tailored services to help businesses thrive in the digital age.
           </p>
         </div>
       </section>
@@ -168,8 +202,35 @@ export default function Home() {
           </Card>
         </div>
       </section>
+    </main>
 
-    </div>
+          {/* Schema Markup */}
+          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareCompany",
+        "name": "Valcheq Technologies",
+        "url": "https://valcheq.com",
+        "logo": "https://valcheq.com/images/valcheq_logo.png",
+        "description": "Empowering businesses with cutting-edge Web Development, Data Analytics, and AI Solutions.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Milele Centre, Kitengela",
+          "addressLocality": "Nairobi, Nairobi County",
+          "addressRegion": "NBO",
+          "postalCode": "46-00242, Kitengela",
+          "addressCountry": "KE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+254 703649833",
+          "contactType": ["technical support", "general inquiries"]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/valcheq"
+        ]
+      })}} />
+    </>
   )
 }
+
 
