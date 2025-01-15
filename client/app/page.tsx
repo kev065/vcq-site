@@ -61,11 +61,13 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <RevealOnScroll threshold={0.1}>
       <section id="services" className="py-20">
         <div className="container mx-auto px-4">
+        <RevealOnScroll threshold={0.1}>
           <h2 className="text-3xl font-bold text-center mb-12 text-blue-800">Our Services</h2>
+          </RevealOnScroll>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <RevealOnScroll threshold={0.1} delay={0.2}>
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center text-blue-600">
@@ -83,6 +85,8 @@ export default function Home() {
                 </ul>
               </CardContent>
             </Card>
+            </RevealOnScroll>
+            <RevealOnScroll threshold={0.1} delay={0.4}>
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center text-blue-600">
@@ -99,6 +103,8 @@ export default function Home() {
                 </ul>
               </CardContent>
             </Card>
+            </RevealOnScroll>
+            <RevealOnScroll threshold={0.1} delay={0.6}>
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center text-blue-600">
@@ -116,10 +122,10 @@ export default function Home() {
                 </ul>
               </CardContent>
             </Card>
+            </RevealOnScroll>
           </div>
         </div>
       </section>
-      </RevealOnScroll>
 
       {/* About Section */}
       <RevealOnScroll threshold={0.1}>
