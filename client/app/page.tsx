@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Code, BarChart, Brain } from 'lucide-react'
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { RevealOnScroll } from '@/components/RevealOnScroll'
 
 export const metadata: Metadata = {
   title: 'Valcheq Technologies | Web Development, Data Analytics, and AI Solutions',
@@ -45,15 +46,22 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
+        <RevealOnScroll threshold={0} delay={0.2}>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Empowering Your Digital Journey</h1>
+          </RevealOnScroll>
+          <RevealOnScroll threshold={0} delay={0.4}>
           <p className="text-xl mb-8">Web Development | Data Analytics | AI Solutions</p>
+          </RevealOnScroll>
+          <RevealOnScroll threshold={0} delay={0.6}>
           <Button asChild size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50">
             <Link href="#contact">Contact Us</Link>
           </Button>
+          </RevealOnScroll>
         </div>
       </section>
 
       {/* Services Section */}
+      <RevealOnScroll threshold={0.1}>
       <section id="services" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-blue-800">Our Services</h2>
@@ -111,8 +119,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </RevealOnScroll>
 
       {/* About Section */}
+      <RevealOnScroll threshold={0.1}>
       <section id="about" className="bg-blue-100 py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">About Valcheq Technologies</h2>
@@ -121,11 +131,13 @@ export default function Home() {
           </p>
         </div>
       </section>
+      </RevealOnScroll>
 
       {/* Contact Section */}
+      <RevealOnScroll threshold={0.1}>
       <section id="contact" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">Get In Touch</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">Start your project with us</h2>
           <Card className="max-w-md mx-auto">
             <CardContent>
               <form
@@ -202,6 +214,7 @@ export default function Home() {
           </Card>
         </div>
       </section>
+      </RevealOnScroll>
     </main>
 
           {/* Schema Markup */}
